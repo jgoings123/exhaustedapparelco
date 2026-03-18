@@ -9,8 +9,8 @@
     :root {
       --bg-1: #0b0b0d;
       --bg-2: #141419;
-      --card: rgba(20, 20, 26, 0.82);
-      --line: rgba(255, 255, 255, 0.09);
+      --card: rgba(20, 20, 26, 0.84);
+      --line: rgba(255, 255, 255, 0.08);
       --text: #f5f5f7;
       --muted: #b9bcc7;
       --accent: #ff8a00;
@@ -66,7 +66,7 @@
     }
 
     .wrap {
-      width: min(100%, 980px);
+      width: min(100%, 900px);
       position: relative;
       z-index: 1;
     }
@@ -118,7 +118,7 @@
     }
 
     .hero {
-      padding: 72px 28px 56px;
+      padding: 88px 28px 70px;
       text-align: center;
       position: relative;
       isolation: isolate;
@@ -128,7 +128,7 @@
       content: "";
       position: absolute;
       inset: auto 0 0 0;
-      height: 160px;
+      height: 180px;
       background: radial-gradient(circle at center, rgba(255,138,0,0.16), transparent 65%);
       z-index: -1;
       pointer-events: none;
@@ -136,11 +136,11 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.6rem, 7vw, 6rem);
+      font-size: clamp(2.8rem, 8vw, 6.2rem);
       line-height: 0.95;
       letter-spacing: -0.04em;
       font-weight: 900;
-      text-transform: lowercase;
+      text-transform: none;
       text-wrap: balance;
     }
 
@@ -152,9 +152,9 @@
     }
 
     .sub {
-      width: min(100%, 700px);
-      margin: 22px auto 0;
-      font-size: clamp(1rem, 2vw, 1.12rem);
+      width: min(100%, 650px);
+      margin: 24px auto 0;
+      font-size: clamp(1rem, 2vw, 1.1rem);
       line-height: 1.6;
       color: var(--muted);
     }
@@ -164,14 +164,14 @@
       gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 30px;
+      margin-top: 34px;
     }
 
     .btn {
       appearance: none;
       border: 0;
       border-radius: 14px;
-      padding: 15px 24px;
+      padding: 15px 26px;
       font-size: 1rem;
       font-weight: 800;
       text-decoration: none;
@@ -195,34 +195,6 @@
       transform: translateY(-2px);
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      padding: 0 22px 22px;
-    }
-
-    .feature {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.025);
-      border-radius: 18px;
-      padding: 18px;
-      text-align: left;
-    }
-
-    .feature-title {
-      font-size: 0.92rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .feature-copy {
-      font-size: 0.92rem;
-      line-height: 1.5;
-      color: var(--muted);
-    }
-
     .footer {
       padding: 0 22px 22px;
       text-align: center;
@@ -234,12 +206,7 @@
 
     @media (max-width: 760px) {
       .hero {
-        padding: 54px 20px 38px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-        padding: 0 16px 16px;
+        padding: 62px 20px 46px;
       }
 
       .topbar {
@@ -264,39 +231,18 @@
       </div>
 
       <div class="hero">
-        <h1><span class="highlight">show me them titties</span></h1>
+        <h1><span class="highlight">Show Me Them Titties</span></h1>
         <p class="sub">
           You made it. Since you’re already here, go check out the shop.
         </p>
 
         <div class="actions">
           <a class="btn btn-primary" href="https://exhaustedapparelco.etsy.com" target="_blank" rel="noopener noreferrer">
-            visit the shop
+            Visit the Shop
           </a>
-          <a class="btn btn-secondary" href="#more">
-            what is this?
+          <a class="btn btn-secondary" href="https://exhaustedapparelco.etsy.com" target="_blank" rel="noopener noreferrer">
+            Shop Etsy
           </a>
-        </div>
-      </div>
-
-      <div class="features" id="more">
-        <div class="feature">
-          <div class="feature-title">Just a joke page</div>
-          <div class="feature-copy">
-            This page exists to make the QR code fun instead of dumping people straight onto a product link.
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-title">Easy to update later</div>
-          <div class="feature-copy">
-            The QR code can stay the same, and this page can always point people to the shop.
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature-title">Your traffic, your shop</div>
-          <div class="feature-copy">
-            No promoting someone else’s merch page. No random site. It sends people straight to your store.
-          </div>
         </div>
       </div>
 

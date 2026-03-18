@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show Me Them Titties</title>
+  <meta name="description" content="A joke landing page for Exhausted Apparel Co." />
+  <style>
+    :root {
+      --bg-1: #0b0b0d;
+      --bg-2: #141419;
+      --card: rgba(20, 20, 26, 0.82);
+      --line: rgba(255, 255, 255, 0.09);
+      --text: #f5f5f7;
+      --muted: #b9bcc7;
+      --accent: #ff8a00;
+      --accent-2: #ffd166;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,138,0,0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(255,209,102,0.10), transparent 22%),
+        linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04), transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.025), transparent 20%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .wrap {
+      width: min(100%, 980px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 18px rgba(255, 138, 0, 0.45);
+    }
+
+    .badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero {
+      padding: 72px 28px 56px;
+      text-align: center;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 160px;
+      background: radial-gradient(circle at center, rgba(255,138,0,0.16), transparent 65%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      text-transform: lowercase;
+      text-wrap: balance;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #ffffff, #ffd9a8 70%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .sub {
+      width: min(100%, 700px);
+      margin: 22px auto 0;
+      font-size: clamp(1rem, 2vw, 1.12rem);
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      border-radius: 14px;
+      padding: 15px 24px;
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: #111;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      box-shadow: 0 12px 30px rgba(255, 138, 0, 0.28);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 0 22px 22px;
+    }
+
+    .feature {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+      border-radius: 18px;
+      padding: 18px;
+      text-align: left;
+    }
+
+    .feature-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .feature-copy {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 0 22px 22px;
+      text-align: center;
+      color: #8f93a1;
+      font-size: 0.86rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 54px 20px 38px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        padding: 0 16px 16px;
+      }
+
+      .topbar {
+        padding: 12px 14px;
+      }
+
+      .badge {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="topbar">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          Exhausted Apparel Co.
+        </div>
+        <div class="badge">official joke landing page</div>
+      </div>
+
+      <div class="hero">
+        <h1><span class="highlight">show me them titties</span></h1>
+        <p class="sub">
+          You made it. Since you’re already here, go check out the shop.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://exhaustedapparelco.etsy.com" target="_blank" rel="noopener noreferrer">
+            visit the shop
+          </a>
+          <a class="btn btn-secondary" href="#more">
+            what is this?
+          </a>
+        </div>
+      </div>
+
+      <div class="features" id="more">
+        <div class="feature">
+          <div class="feature-title">Just a joke page</div>
+          <div class="feature-copy">
+            This page exists to make the QR code fun instead of dumping people straight onto a product link.
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">Easy to update later</div>
+          <div class="feature-copy">
+            The QR code can stay the same, and this page can always point people to the shop.
+          </div>
+        </div>
+        <div class="feature">
+          <div class="feature-title">Your traffic, your shop</div>
+          <div class="feature-copy">
+            No promoting someone else’s merch page. No random site. It sends people straight to your store.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        workwear • garage • graphic apparel
+      </div>
+    </section>
+  </main>
+</body>
+</html>

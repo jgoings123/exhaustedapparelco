@@ -13,6 +13,7 @@
       --line: rgba(255, 255, 255, 0.08);
       --text: #f5f5f7;
       --muted: #b9bcc7;
+      --muted-2: #8f93a1;
       --accent: #ff8a00;
       --accent-2: #ffd166;
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
@@ -66,7 +67,7 @@
     }
 
     .wrap {
-      width: min(100%, 900px);
+      width: min(100%, 860px);
       position: relative;
       z-index: 1;
     }
@@ -82,7 +83,6 @@
 
     .topbar {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 14px 18px;
       border-bottom: 1px solid var(--line);
@@ -108,17 +108,8 @@
       box-shadow: 0 0 18px rgba(255, 138, 0, 0.45);
     }
 
-    .badge {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 0.78rem;
-      color: var(--muted);
-      background: rgba(255,255,255,0.03);
-    }
-
     .hero {
-      padding: 88px 28px 70px;
+      padding: 88px 28px 64px;
       text-align: center;
       position: relative;
       isolation: isolate;
@@ -154,16 +145,14 @@
     .sub {
       width: min(100%, 650px);
       margin: 24px auto 0;
-      font-size: clamp(1rem, 2vw, 1.1rem);
+      font-size: clamp(1rem, 2vw, 1.08rem);
       line-height: 1.6;
       color: var(--muted);
     }
 
     .actions {
       display: flex;
-      gap: 14px;
       justify-content: center;
-      flex-wrap: wrap;
       margin-top: 34px;
     }
 
@@ -171,24 +160,15 @@
       appearance: none;
       border: 0;
       border-radius: 14px;
-      padding: 15px 26px;
+      padding: 15px 28px;
       font-size: 1rem;
       font-weight: 800;
       text-decoration: none;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
       cursor: pointer;
-    }
-
-    .btn-primary {
       color: #111;
       background: linear-gradient(135deg, var(--accent-2), var(--accent));
       box-shadow: 0 12px 30px rgba(255, 138, 0, 0.28);
-    }
-
-    .btn-secondary {
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--line);
     }
 
     .btn:hover {
@@ -198,9 +178,9 @@
     .footer {
       padding: 0 22px 22px;
       text-align: center;
-      color: #8f93a1;
-      font-size: 0.86rem;
-      letter-spacing: 0.04em;
+      color: var(--muted-2);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -213,8 +193,8 @@
         padding: 12px 14px;
       }
 
-      .badge {
-        display: none;
+      .footer {
+        font-size: 0.72rem;
       }
     }
   </style>
@@ -227,7 +207,6 @@
           <span class="brand-dot"></span>
           Exhausted Apparel Co.
         </div>
-        <div class="badge">official joke landing page</div>
       </div>
 
       <div class="hero">
@@ -237,17 +216,14 @@
         </p>
 
         <div class="actions">
-          <a class="btn btn-primary" href="https://exhaustedapparelco.etsy.com" target="_blank" rel="noopener noreferrer">
+          <a class="btn" href="https://exhaustedapparelco.etsy.com" target="_blank" rel="noopener noreferrer">
             Visit the Shop
-          </a>
-          <a class="btn btn-secondary" href="https://exhaustedapparelco.etsy.com" target="_blank" rel="noopener noreferrer">
-            Shop Etsy
           </a>
         </div>
       </div>
 
       <div class="footer">
-        workwear • garage • graphic apparel
+        Workwear • Garage • Graphic Apparel
       </div>
     </section>
   </main>
